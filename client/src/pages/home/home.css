@@ -1,0 +1,27 @@
+/*  Padrão de butão para a seção "Apresentação" e "Planos"  */
+.btn-link {
+   background-color: var(--dark);
+   color: var(--light);
+   text-align: center;
+   border-radius: 30px;
+   text-decoration: none;
+   display: block;
+   width: 200px;
+   height: 50px;
+   line-height: calc(3rem + 2px);
+   margin-top: .625rem;
+   margin-bottom: .625rem;
+}
+
+footer {
+   background-color: var(--dark);
+   color: var(--light);
+   height: calc(var(--h-header) - 30px);
+   display: flex;
+   align-items: center;
+}
+
+footer > .FlexWrap {
+   justify-content: space-between;
+   align-items: center;
+}

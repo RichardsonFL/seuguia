@@ -1,0 +1,22 @@
+.btn-link-1,
+.btn-link-2 {
+    text-align: center;
+    border-radius: 30px;
+    text-decoration: none;
+    display: block;
+    width: 200px;
+    height: 50px;
+    line-height: calc(3rem + 2px);
+    margin-top: .625rem;
+    margin-bottom: .625rem;
+}
+
+.btn-link-1 {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+.btn-link-2 {
+    background-color: var(--light);
+    color: var(--dark);
+}

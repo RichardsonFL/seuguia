@@ -1,0 +1,70 @@
+#plan {
+    flex-direction: column;
+    padding: 50px 0 100px 0;
+}
+
+#plan {
+    min-height: 100vh;
+}
+#plan > .FlexWrap {
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+#plan h2 {
+    font-size: 2rem;
+    color: var(--dark);
+}
+
+#plan > .FlexWrap > div{
+    flex: 1;
+    border: 5px solid var(--dark);
+    margin-right: 1.25rem;
+    padding: 10px;
+    max-width: 240px;
+}
+
+#plan a {
+    margin: auto;
+    margin-bottom: 1.24rem;
+}
+
+#plan h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 20px;
+    
+}
+
+#plan h3::after {
+    content: "";
+    background-color: var(--dark);
+    width: 100%;
+    height: 3px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.item-plan > ul {
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-plan > ul li {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.item-plan li::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: var(--dark);
+    margin: 5px;
+}

@@ -1,0 +1,87 @@
+/*  Styling of Drop Menu, imported from DropDownMenu.jsx*/
+.DropDownMenu {
+   position: relative;
+}
+
+.DropDownMenu img{
+   display:block;
+}
+
+.DropDownMenu .nav-links {
+flex-direction: column;
+align-items: start;
+gap: 1px;
+}
+.toggle, .img-user {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 16px;
+}
+
+.toggle{
+   width:42px;
+   height: 42px;
+   background-color: #c0c0D9;
+   border-radius: 50%;
+   border: 3px solid #eef;
+}
+
+.toggle img {
+   width: 28px;
+   height: auto;
+}
+
+.img-user {
+   width: 100%;
+   height: auto;
+}
+
+.img-user img {
+   width: 72px;
+   height: 72px;
+   padding: 6px;
+   border: 3px solid var(--dark);
+   border-radius: 50%;
+}
+
+.drop-down{
+   width: 240px;
+   padding: 8px 1.5rem;
+   background: #fff;
+   margin: 0 auto;
+   top: calc(42px + 1rem);
+   margin-left: -170px;
+   border: 1px solid #ddd; 
+   border-radius: 8px;
+   box-shadow: 0 0 16px #a6a4;
+   position: absolute;
+   z-index: 999;
+}
+
+.drop-menu{
+   margin-top:48px;
+}
+
+.drop-menu {margin-top: 2rem;}
+.drop-menu a{
+   display: block;
+   margin-bottom: 4px;
+   padding: 8px 0;
+   color: var(--dark);
+   
+}
+  
+
+/* Replace .line by .img-user-profile::afetr */
+.drop-down > .img-user::after {
+    content: "";
+    width: 90%;
+    height: 1px;
+    text-align: center;
+    
+    background-color: var(--dark);
+    color: var(--dark);
+}
+

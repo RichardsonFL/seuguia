@@ -1,0 +1,27 @@
+.presentation {
+    height: calc(100vh - var(--h-header));
+    align-items: center;
+    justify-content: space-between;
+}
+
+.presentation .text-presentation {
+    min-width: 200px;
+}
+
+.text-presentation h1{
+    color: var(--dark);
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+/*  Padrão de butão para a seção "Apresentação" e "Planos"  */
+
+
+.presentation .images {
+    padding:0;
+}
+
+.images > img {
+    width: 100%;
+}
+

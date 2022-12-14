@@ -1,0 +1,64 @@
+.login-container {
+    min-height: calc(100vh - var(--header-height));    
+    justify-content: center;
+    align-items: center;   
+}
+
+.login-area {
+    border-radius: 8px;
+    box-shadow: 0 0 8px #333;
+}
+
+.login-area .header-form {
+    text-align: center;
+    margin-bottom: 1.825rem;
+}
+
+.header-form img{
+    max-width: 240px;
+    margin-bottom: 1.5rem;
+}
+
+/* ################## Pode ser tirado daqui */
+.form-btn {
+    margin-top: 36px;
+    justify-content: center;
+  }
+  
+  .form-btn > div {
+    width: 75%;
+    margin-bottom: 1rem;
+  }
+/* ########################################## */
+
+.box-link {
+    margin: 3px 0 30px 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  
+  .box-link a {
+    padding: 5px;
+    font-size: .8125rem;
+    color: #347cb4;
+    font-family: "Graphik", serif;
+    transition: 0.3s;
+  }
+  
+  .box-link a:hover {
+    color: #0c1c34;
+  }
+
+@media (min-width: 768px){
+    .login-container > .wrap-md {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+    }
+
+    .login-area {
+        padding: 32px 8.333%;
+    }
+}
