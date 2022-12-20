@@ -17,7 +17,8 @@
 }
 
 .text-presentation .btn-link-1 {
-    margin: .625rem auto;
+    margin: 1.5rem auto;
+
 }
 
 /*  Padrão de butão para a seção "Apresentação" e "Planos"  */
@@ -29,5 +30,6 @@
 
 .images > img {
     width: 100%;
+    border-radius: 10px;
 }
 

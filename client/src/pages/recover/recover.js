@@ -19,25 +19,25 @@ function Login(props){
                         <img id="logo" src={Logo} alt="Seuguia Logo"/>
                         </Link>
                         
-                        <p>Faça seu login</p>
+                        <p>Recupere sua senha</p>
                     </div>
                     <form onSubmit={handleSubmit}>
                         <FormGroup
-                            type="email"
-                            text="E-mail"
-                            id="email"
-                            name="email"
+                            type="password"
+                            text="Insira nova senha"
+                            id="newPassword"
+                            name="newPassword"
                             value=""
-                            placeholder="email@exemple.com"
+                            placeholder="Nova Senha"
                             required
                         />
                         <FormGroup
                             type="password"
-                            text="Senha"
-                            id="password"
-                            name="password"
+                            text="Confirme sua senha"
+                            id="confirmPassword"
+                            name="conformPassword"
                             value=""
-                            placeholder="Sua senha..."
+                            placeholder="Confirme sua senha"
                             required
                         />
                         <LargeWrap>
@@ -50,7 +50,7 @@ function Login(props){
                     </form>
                     <LargeWrap>
                         <FlexWrap className="box-link">
-                            <Link to="../recover">Esqueci minha senha</Link>
+                            <Link to="../sign-up">Esqueci minha senha</Link>
                             <Link to="../sign-up">Ainda não é cadastrado?</Link>
                         </FlexWrap>
                     </LargeWrap>

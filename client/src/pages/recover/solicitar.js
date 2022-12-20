@@ -19,38 +19,28 @@ function Login(props){
                         <img id="logo" src={Logo} alt="Seuguia Logo"/>
                         </Link>
                         
-                        <p>Faça seu login</p>
+                        <p>Recupere sua senha</p>
                     </div>
                     <form onSubmit={handleSubmit}>
                         <FormGroup
                             type="email"
-                            text="E-mail"
+                            text="Insira seu e-mail"
                             id="email"
                             name="email"
                             value=""
-                            placeholder="email@exemple.com"
-                            required
-                        />
-                        <FormGroup
-                            type="password"
-                            text="Senha"
-                            id="password"
-                            name="password"
-                            value=""
-                            placeholder="Sua senha..."
+                            placeholder="Insira seu e-mail"
                             required
                         />
                         <LargeWrap>
                             <FlexWrap className="form-btn">
                                 <div>
-                                    <input type="submit" className="btn btn-submit" value="Entrar"/>
+                                    <input type="submit" className="btn btn-submit" value="Recuperar"/>
                                 </div>
                             </FlexWrap>
                         </LargeWrap>
                     </form>
                     <LargeWrap>
                         <FlexWrap className="box-link">
-                            <Link to="../recover">Esqueci minha senha</Link>
                             <Link to="../sign-up">Ainda não é cadastrado?</Link>
                         </FlexWrap>
                     </LargeWrap>
