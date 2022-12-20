@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { FormGroup } from "../../components/layouts/Forms/FormGroup";
 import {LargeWrap, FlexWrap, MediumWrap} from "../../components/layouts/Containers";
 import Logo from "../../assets/logo/banner_2.svg";
-import "./login.css";
+import "./recover.css";
 
 function Login(props){
     function handleSubmit(e){
