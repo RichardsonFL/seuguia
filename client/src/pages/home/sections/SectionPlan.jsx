@@ -12,7 +12,7 @@ function SectionPlan(){
                     <div>
                         <h2>Planos</h2>
                     </div>
-                    <FlexWrap className="FlexMaxWidth">
+                    <FlexWrap>
                         <div className="item-plan">
                             <div>
                                 <h3>Plano 1</h3>

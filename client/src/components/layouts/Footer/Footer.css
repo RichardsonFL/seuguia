@@ -1,0 +1,12 @@
+footer {
+    background-color: var(--dark);
+    color: var(--light);
+    height: calc(var(--h-header) - 30px);
+    display: flex;
+    align-items: center;
+ }
+ 
+ footer > .FlexWrap {
+    justify-content: space-between;
+    align-items: center;
+ }

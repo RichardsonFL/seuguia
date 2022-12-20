@@ -2,6 +2,11 @@
 import { FlexWrap } from "../../../components/layouts/Containers";
 import ButtonLink from "../../../components/layouts/Buttons/ButtonLink";
 
+//icons png
+import Guides from "../../../assets/icons/local-guides.png";
+import Tourist from "../../../assets/icons/largest-community.png";
+import Traveler from "../../../assets/icons/trip-itneries.png";
+
 import "./styles/SectionService.css";
 
 function SectionService(){
@@ -10,29 +15,29 @@ function SectionService(){
             <div className="container-wrap">
                 <FlexWrap id="services" className="FlexMaxWidth">
                     <div>
-                        <h2>Serviços</h2>
+                        <h2>Para quem é este portal</h2>
                     </div>
-                    <FlexWrap className="FlexMaxWidth">
+                    <FlexWrap>
                         <div>
                             <div>
-                                <img src="./images/icon-2.png" alt="hospedagens"/>
+                                <img src={Guides} alt="hospedagens"/>
                             </div>
-                            <p>Hospedagens</p>
-                            <ButtonLink className="btn-link-2" to="#">Comprar Agora</ButtonLink>
+                            <p>Você é um guia?</p>
+                            <ButtonLink className="btn-link-2" to="#">Saiba mais</ButtonLink>
                         </div>
                         <div>
                             <div>
-                                <img src="./images/icon-1.png" alt="pacote de viagens"/>
+                                <img src={Tourist} alt="pacote de viagens"/>
                             </div>
-                            <p>Pacotes de viagens</p>
-                            <ButtonLink className="btn-link-2" to="#">Comprar Agora</ButtonLink>
+                            <p>Você é Turista?</p>
+                            <ButtonLink className="btn-link-2" to="#">Saiba mais!</ButtonLink>
                         </div>
                         <div>
                             <div>
-                                <img src="./images/icon-3.png" alt="roteiros personalizados"/>
+                                <img src={Traveler} alt="roteiros"/>
                             </div>
-                            <p>Roteiros personalizados</p>
-                            <ButtonLink className="btn-link-2" to="#">Comprar Agora</ButtonLink>
+                            <p>És um Viajante?</p>
+                            <ButtonLink className="btn-link-2" to="#">Saiba mais!</ButtonLink>
                         </div>
                     </FlexWrap>
                 </FlexWrap>

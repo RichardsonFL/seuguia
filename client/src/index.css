@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
 :root {
-    --dark: #223A67;
+    --dark: #0e1835; /*#223A67;*/
     --light: #fff;
     --default: #000;
     --h-header: 72px;

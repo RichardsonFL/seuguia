@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import React from "react";
-import Logo from "../../../assets/logo/light351x93.png";
+import Logo from "../../../assets/logo/atuallight351x93.png";
 import {FlexWrap} from "../Containers";
 import NavMenu from "./header-extra/NavMenu";
 
