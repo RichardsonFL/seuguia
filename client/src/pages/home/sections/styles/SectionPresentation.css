@@ -6,12 +6,18 @@
 
 .presentation .text-presentation {
     min-width: 200px;
+    text-align: center;
 }
 
 .text-presentation h1{
     color: var(--dark);
     font-size: 3rem;
+    padding: 0 32px;
     margin-bottom: 10px;
+}
+
+.text-presentation .btn-link-1 {
+    margin: .625rem auto;
 }
 
 /*  Padrão de butão para a seção "Apresentação" e "Planos"  */

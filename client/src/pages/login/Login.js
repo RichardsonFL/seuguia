@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 import { FormGroup } from "../../components/layouts/Forms/FormGroup";
 import {LargeWrap, FlexWrap, MediumWrap} from "../../components/layouts/Containers";
-
+import Logo from "../../assets/logo/banner_2.svg";
 import "./login.css";
 
 function Login(props){
@@ -17,9 +17,9 @@ function Login(props){
                 <MediumWrap className="login-area">
                     <div className="header-form">
                         <Link to="/">
-                        {/* <img id="logo" src={logo} alt="Seuguia Logo"/> */}
+                        <img id="logo" src={Logo} alt="Seuguia Logo"/>
                         </Link>
-                        <p>Bem Vindo</p>
+                        
                         <p>Faça seu login</p>
                     </div>
                     <form onSubmit={handleSubmit}>

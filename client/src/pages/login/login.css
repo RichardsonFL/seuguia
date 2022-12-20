@@ -1,12 +1,11 @@
 .login-container {
-    min-height: calc(100vh - var(--header-height));    
+    min-height: calc(100vh - var(--h-header));    
     justify-content: center;
     align-items: center;   
 }
 
 .login-area {
-    border-radius: 8px;
-    box-shadow: 0 0 8px #333;
+    padding: 1.825rem 30px;
 }
 
 .login-area .header-form {
@@ -52,13 +51,16 @@
     color: #0c1c34;
   }
 
+
 @media (min-width: 768px){
-    .login-container > .wrap-md {
-        flex: 0 0 33.333%;
-        max-width: 33.333%;
+    .login-container > .MediumWrap {
+        flex: 0 0 30%;
+        max-width: 30%;
     }
 
     .login-area {
-        padding: 32px 8.333%;
+        padding: 32px 3.25rem;
+        border-radius: 8px;
+        box-shadow: 0 0 8px #333;
     }
 }
