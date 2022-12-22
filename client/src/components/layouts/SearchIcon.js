@@ -8,13 +8,14 @@ function SearchIcon() {
     
     const InputSearch = {
         backgroundImage: `url(${SearchIconPNG})`,
-        backgroundPosition: "10px 10px",
-        backgroundRepeat: "no-repeat"
+        backgroundPosition: "10px center",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "18px"
     }
 
     return(
-        <div className="DropDownMenu">
-            <div className="toggle" onClick={() => setTimeout(toggle, 300)}> 
+        <div className="DropDropSearchInput">
+            <div className="toggleInputSearch" onClick={() => setTimeout(toggle, 300)}> 
                 <img src={SearchIconPNG} alt="Search."/>
             </div>
             <div className="drop-search" style={{"display": display}}>

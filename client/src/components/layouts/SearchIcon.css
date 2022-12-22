@@ -1,9 +1,51 @@
+.DropSearchInput {
+   position: relative;
+}
+
+.DropSearchInput img{
+   display:block;
+}
+
+.DropSearchInput .nav-links {
+flex-direction: column;
+align-items: start;
+gap: 1px;
+}
+
+.toggleInputSearch, .img-user {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 16px;
+}
+
+.toggleInputSearch{
+   width:28px;
+   height: 28px;
+   /*background-color: #c0c0D9;*/
+   border-radius: 50%;
+   border: 1px solid #eef;
+}
+
+.toggleInputSearch:hover {
+   background-color: #c0c0D950;
+   border-radius: 50%;
+   border: 1px solid #eef;
+   box-shadow: 0 0 8px;
+}
+
+.toggleInputSearch img {
+   width: 16px;
+   height: auto;
+}
+
 .drop-search{
-  width: 1000%;
-  padding: 8px 1.5rem;
-  background: #fff;
+  
+  padding: 16px 32px;
+  background: var(--dark);
   margin: 0 auto;
-  top: calc(42px + 1rem);
+  top: calc(42px + 1.5rem);
   margin-left: 0;
   border: 1px solid #ddd; 
   border-radius: 8px;
@@ -26,14 +68,14 @@ input[type=text] {
     width: 130px;
     box-sizing: border-box;
     border: 2px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: white;
+    border-radius: 6px;
+    background-color: #ccc5;
     padding: 12px 20px 12px 40px;
-    transition: width 0.4s ease-in-out;
+    outline: none;
+    /*transition: width 0.2s ease-in-out;*/
   }
-  
-  input[type=text]:focus {
+
+input[type=text]:focus {
     width: 100%;
   }
 
