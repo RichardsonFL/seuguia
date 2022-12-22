@@ -72,7 +72,7 @@
 
     .login-area {
         padding: 32px 3.25rem;
+        border: 1px solid #ccc5;
         border-radius: 8px;
-        box-shadow: 0 0 8px #333;
     }
 }
