@@ -9,6 +9,7 @@ function setter({id, className, children}, defaultClass){
     )
 }
 
+export const FlexMaxWitdth = props => setter(props, "FlexMaxWitdth");
 export const FlexWrap = props => setter(props, "FlexWrap");
 export const LargeWrap = props => setter(props, "LargeWrap");
 export const ThreeQWrap = props => setter(props, "ThreeQWrap");
