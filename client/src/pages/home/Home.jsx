@@ -8,24 +8,10 @@ import "./home.css";
 function Home(){
     return(
         <main>
-            {/* Presentation Section */}
-            
-            <SectionPresentation />
-            {/* End aqui */}
-            {/* About Section */}
-            
-            <SectionAbout />
-            {/* End aqui */}
-            
-            {/* Service Section */}
-            
-            <SectionService />
-            {/* End aqui */}
-
-            {/* Plan Section */}
-            
+            <SectionPresentation />            
+            <SectionAbout />            
+            <SectionService />            
             <SectionPlan />
-            {/* ... */}
         </main>
     )
 }

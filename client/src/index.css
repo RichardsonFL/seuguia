@@ -4,6 +4,10 @@
     --light: #fff;
     --default: #000;
     --h-header: 72px;
+    --card-p-color: #25255c;
+    --card-s-color: aliceblue;
+    --h-card: 320px;
+    --w-card: 220px;
 }
 
 * {

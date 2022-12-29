@@ -1,18 +1,20 @@
 import { Link } from "react-router-dom";
-import { FlexWrap } from "../../../components/layouts/Containers";
+import { FlexMaxWitdth, FlexWrap } from "../../../components/layouts/Containers";
 import ButtonLink from "../../../components/layouts/Buttons/ButtonLink";
 
 import "./styles/SectionPlan.css";
+import Cards from "../../../components/layouts/Cards/Cards";
+import Card from "../../../components/layouts/Cards/Card";
 
 function SectionPlan(){
 
     return(
         <section>
-                <FlexWrap id="plan" className="FlexMaxWidth">
+                <FlexMaxWitdth id="plan">
                     <div>
                         <h2>Planos</h2>
                     </div>
-                    <FlexWrap>
+                    {/* <FlexWrap>
                         <div className="item-plan">
                             <div>
                                 <h3>Plano 1</h3>
@@ -50,8 +52,12 @@ function SectionPlan(){
                             <br/>
                             <ButtonLink className="btn-link-1" to="#">Saiba Mais!</ButtonLink>
                         </div>
-                    </FlexWrap>
-                </FlexWrap>
+                    </FlexWrap> */}
+                    <Cards>
+			<Card/><Card/><Card/><Card/><Card/><Card/><Card/><Card/><Card/>
+		</Cards>
+                    
+                </FlexMaxWitdth>
             </section>
     )
 }

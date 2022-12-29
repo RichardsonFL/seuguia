@@ -1,13 +1,13 @@
 
 import Img from "../../../assets/images/about2.jpg";
 import ButtonLink from "../../../components/layouts/Buttons/ButtonLink";
-import { FlexWrap, MediumWrap } from "../../../components/layouts/Containers";
+import { FlexMaxWitdth, FlexWrap, MediumWrap } from "../../../components/layouts/Containers";
 import Banner from "../../../assets/logo/banner_2.svg";
 import "./styles/SectionPresentation.css";
 
 function SectionPresentation(){
     return(
-        <FlexWrap className="FlexMaxWidth presentation">
+        <FlexMaxWitdth className="presentation">
             <div className="text-presentation">
                 <h1>
                     <img src={Banner} alt="banner"/>                 
@@ -20,7 +20,7 @@ The point of using Lorem Ipsum is that it has a more-or-less normal distribution
             <MediumWrap className="images">
                 <img src={Img} alt="banner de apresentação" />
             </MediumWrap>
-        </FlexWrap>
+        </FlexMaxWitdth>
     )
 }
 export default SectionPresentation;
