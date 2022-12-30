@@ -7,46 +7,69 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Cadastro {
-  id      Int     @id @default(autoincrement())
-  nome    String
-  email   String
-  celular String?
-  cpf     String?
-  crg     String?
-  senha   String
-  endercos Enderecos[]
-  tipoDeConta TipoDeConta[]
-  passeios    Passeios[]
+model Address {
+  id         Int          @id @default(autoincrement())
+  city       String
+  state      String
+  country    String
+  street     String
+  userID     Int?
+  Users      Users?       @relation(fields: [userID], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  Legal_Info Legal_Info[]
 }
 
-model Enderecos {
-  id          Int                      @id @default(autoincrement())
-  estado      String
-  cidade      String
-  rua         String
-  cep         Int
-  complemento Int?
-  numero      String
-  IDCadastro  Int?
-  cadastro      Cadastro? @relation(fields: [IDCadastro], references: [id], onDelete: NoAction, onUpdate: NoAction)
+model Contacts {
+  id         Int              @id @default(autoincrement())
+  phone      String?          @unique(map: "sqlite_autoindex_Contacts_1")
+  instagram  Unsupported("")? @unique(map: "sqlite_autoindex_Contacts_2")
+  facebook   Unsupported("")? @unique(map: "sqlite_autoindex_Contacts_3")
+  whatsapp   String?          @unique(map: "sqlite_autoindex_Contacts_4")
+  userID     Int
+  contactID  Int?
+  addressID  Int
+  Profile    Profile?         @relation(fields: [contactID], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  Users      Users            @relation(fields: [userID], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  Legal_Info Legal_Info[]
 }
 
-model TipoDeConta {
-  id          Int       @id @default(autoincrement())
-  guia        Int       @default(0)
-  IDCadastro  Int?
-  cadastro    Cadastro? @relation(fields: [IDCadastro], references: [id], onDelete: NoAction, onUpdate: NoAction)
+model Legal_Info {
+  id                                  Int       @id @default(autoincrement())
+  fullName                            String
+  birthDate                           String
+  CPF                                 String    @unique(map: "sqlite_autoindex_Legal_Info_1")
+  CRG                                 String    @unique(map: "sqlite_autoindex_Legal_Info_2")
+  userID                              Int       @unique(map: "sqlite_autoindex_Legal_Info_3")
+  contactID                           Int?
+  addressID                           Int
+  Address                             Address   @relation(fields: [addressID], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  Contacts                            Contacts? @relation(fields: [contactID], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  Users_Legal_Info_userIDToUsers      Users     @relation("Legal_Info_userIDToUsers", fields: [userID], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  Users_Users_legalInfoIDToLegal_Info Users?    @relation("Users_legalInfoIDToLegal_Info")
 }
 
-model Passeios {
-  id          Int                      @id @default(autoincrement())
-  nome_passio String 
-  localidade  String 
-  instrucoes  String
-  data_inicio String
-  data_fim    String
-  valor       Int?
-  IDCadastro  Int?
-  cadastro    Cadastro? @relation(fields: [IDCadastro], references: [id], onDelete: NoAction, onUpdate: NoAction)
+model Profile {
+  id        Int                          @id @default(autoincrement())
+  firstName String
+  lastName  String
+  optName   Unsupported("varchasr(50)")?
+  gender    String?
+  bio       String?
+  userID    Int?                         @unique(map: "sqlite_autoindex_Profile_1")
+  Contacts  Contacts[]
+  Users     Users?                       @relation(fields: [userID], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model Users {
+  id                                       Int                          @id @default(autoincrement())
+  firstName                                String
+  lastName                                 String
+  optName                                  Unsupported("varchasr(50)")?
+  bio                                      String?
+  userID                                   Int?
+  legalInfoID                              Int?                         @unique(map: "sqlite_autoindex_Users_1")
+  Address                                  Address[]
+  Contacts                                 Contacts[]
+  Legal_Info_Legal_Info_userIDToUsers      Legal_Info?                  @relation("Legal_Info_userIDToUsers")
+  Profile                                  Profile?
+  Legal_Info_Users_legalInfoIDToLegal_Info Legal_Info?                  @relation("Users_legalInfoIDToLegal_Info", fields: [legalInfoID], references: [id], onDelete: NoAction, onUpdate: NoAction)
 }
