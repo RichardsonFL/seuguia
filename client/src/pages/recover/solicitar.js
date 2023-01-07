@@ -41,7 +41,7 @@ function Login(props){
                     </form>
                     <LargeWrap>
                         <FlexWrap className="box-link">
-                            <Link to="../sign-up">Ainda não é cadastrado?</Link>
+                            <Link to="/sign-up">Ainda não é cadastrado?</Link>
                         </FlexWrap>
                     </LargeWrap>
                 </MediumWrap>

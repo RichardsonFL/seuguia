@@ -1,14 +1,29 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FormGroup } from "../../components/layouts/Forms/FormGroup";
 import {LargeWrap, FlexWrap, MediumWrap} from "../../components/layouts/Containers";
 import Logo from "../../assets/logo/banner_2.svg";
 import "./SignUp.css";
+import FormField from "./form-data.json";
 
-function Login(props){
+function SignUp(props){
+    const { FormGropProps } = FormField;
+    const[values, setValues] = useState({
+        email: "",
+        password: "",
+        confirmPassword: ""
+    });
+
     function handleSubmit(e){
         e.preventDefault()
         return alert('Login has no implementaton yet!')
     }
+
+    function onChange(e){
+        setValues({...values, [e.target.name]: e.target.value})
+	    console.log(values)
+    }
+    
     return(
         <main>
         <LargeWrap>    
@@ -22,35 +37,9 @@ function Login(props){
                         <p>Faça seu cadastro!</p>
                     </div>
                     <form onSubmit={handleSubmit}>
-                        <FormGroup
-                            type="email"
-                            text="E-mail"
-                            id="email"
-                            name="email"
-                            value=""
-                            placeholder="email@exemple.com"
-                            required
-                        />
-
-                        <FormGroup
-                            type="password"
-                            text="Senha"
-                            id="password"
-                            name="password"
-                            value=""
-                            placeholder="Sua senha..."
-                            required
-                        />
-
-                        <FormGroup
-                            type="password"
-                            text="Repita sua senha"
-                            id="confirmePassword"
-                            name="confirmPassword"
-                            value=""
-                            placeholder="Repita sua senha..."
-                            required
-                        />
+                        {FormGropProps.map(
+                            (item, idx) => <FormGroup key={idx} {...item} onChange={onChange} value={values[item.name]}/>
+                            )}
                         <LargeWrap>
                             <FlexWrap className="form-btn">
                                 <div>
@@ -61,7 +50,7 @@ function Login(props){
                     </form>
                     <LargeWrap>
                         <FlexWrap className="box-link">
-                            <Link to="../login">Já possui uma conta?</Link>
+                            <Link to="/login">Já possui uma conta?</Link>
                         </FlexWrap>
                     </LargeWrap>
                 </MediumWrap>
@@ -71,4 +60,4 @@ function Login(props){
     )
 }
 
-export default Login;
+export default SignUp;

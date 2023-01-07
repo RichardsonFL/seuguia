@@ -1,0 +1,28 @@
+{
+   "FormGropProps": [
+        {
+            "type": "email",
+            "text": "E-mail",
+            "id": "email",
+            "name": "email",
+            "placeholder": "Sue e-mail...",
+            "required": true
+        },
+        {
+            "type": "password",
+            "text": "Senha",
+            "id": "password",
+            "name": "password",
+            "placeholder": "Sua senha...",
+            "required": true
+        },
+        {
+            "type": "password",
+            "text": "Repita sua senha",
+            "id": "confirmPassword",
+            "name": "confirmPassword",
+            "placeholder": "Repita sua senha...",
+            "required": true
+        }
+    ]
+}

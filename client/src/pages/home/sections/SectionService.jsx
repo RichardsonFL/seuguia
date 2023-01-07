@@ -1,5 +1,5 @@
 
-import { FlexMaxWitdth, FlexWrap } from "../../../components/layouts/Containers";
+import { FlexMaxWidth, FlexWrap } from "../../../components/layouts/Containers";
 import ButtonLink from "../../../components/layouts/Buttons/ButtonLink";
 
 //icons png
@@ -13,7 +13,7 @@ function SectionService(){
     return(
         <section>
             <div className="container-wrap">
-                <FlexMaxWitdth id="services">
+                <FlexMaxWidth id="services">
                     <div>
                         <h2>Para quem é este portal</h2>
                     </div>
@@ -40,7 +40,7 @@ function SectionService(){
                             <ButtonLink className="btn-link-2" to="#">Saiba mais!</ButtonLink>
                         </div>
                     </FlexWrap>
-                </FlexMaxWitdth>
+                </FlexMaxWidth>
             </div>
         </section>
     )

@@ -1,14 +1,15 @@
 import { Link } from "react-router-dom";
 import React from "react";
 import Logo from "../../../assets/logo/atuallight351x93.png";
-import {FlexWrap} from "../Containers";
+import {FlexWrap, FlexMaxWidth} from "../Containers";
 import NavMenu from "./header-extra/NavMenu";
 
 import './header-extra/styles/Header.css';
 
 function Header(){
     return (  
-        <header>  
+        <header>
+	<FlexMaxWidth>
             <FlexWrap className="FlexMaxWidth">
                 <div className="area-logo">
                     <Link to="/">
@@ -19,6 +20,7 @@ function Header(){
                     <NavMenu />
                 </div>
             </FlexWrap>
+	</FlexMaxWidth>
         </header>
     )
 }

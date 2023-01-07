@@ -27,7 +27,7 @@
   }
 
 /****  MEDIAS *****/
-@media (min-width: 992px) {  
+@media (min-width: 768px) {  
     .LargeWrap {
       flex: 0 0 100%;
       max-width: 100%;

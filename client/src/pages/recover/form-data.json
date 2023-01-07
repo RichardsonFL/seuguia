@@ -1,0 +1,20 @@
+{
+    "FormGropProps": [
+         {
+             "type": "password",
+             "text": "Nova senha",
+             "id": "password",
+             "name": "password",
+             "placeholder": "Insira sua nova senha...",
+             "required": true
+         },
+         {
+             "type": "password",
+             "text": "Repita sua senha",
+             "id": "confirmPassword",
+             "name": "confirmPassword",
+             "placeholder": "Repita sua senha...",
+             "required": true
+         }
+     ]
+ }

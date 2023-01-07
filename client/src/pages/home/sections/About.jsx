@@ -1,4 +1,4 @@
-import { FlexMaxWitdth, FlexWrap, MediumWrap } from "../../../components/layouts/Containers";
+import { FlexMaxWidth, FlexWrap, MediumWrap } from "../../../components/layouts/Containers";
 import Img from "../../../assets/images/0-main.jpg";
 
 import "./styles/About.css";
@@ -6,7 +6,7 @@ import "./styles/About.css";
 function About(){
     return(
         <section>
-            <FlexMaxWitdth id="about">
+            <FlexMaxWidth id="about">
                 <MediumWrap>
                     <h2>Quem somos</h2>
                     <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
@@ -15,7 +15,7 @@ function About(){
                 <MediumWrap className="images">
                     <img src={Img} alt="balcão de atendimento"/>
                 </MediumWrap>
-            </FlexMaxWitdth>
+            </FlexMaxWidth>
         </section>
     )
 }

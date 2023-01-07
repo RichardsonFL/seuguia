@@ -1,45 +1,38 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FormGroup } from "../../components/layouts/Forms/FormGroup";
 import {LargeWrap, FlexWrap, MediumWrap} from "../../components/layouts/Containers";
-import Logo from "../../assets/logo/banner_2.svg";
+import Header from "../../components/layouts/SubHeader/Header";
 import "./recover.css";
+import FormField from "./form-data.json";
 
 function Login(props){
+    const { FormGropProps } = FormField;
+    const[values, setValues] = useState({
+        password: "",
+        confirmPassword: ""
+    });
+
     function handleSubmit(e){
         e.preventDefault()
         return alert('Login has no implementaton yet!')
     }
+
+    function onChange(e){
+        setValues({...values, [e.target.name]: e.target.value})
+	    console.log(values)
+    }
+
     return(
         <main>
         <LargeWrap>    
             <FlexWrap className="login-container">
                 <MediumWrap className="login-area">
-                    <div className="header-form">
-                        <Link to="/">
-                        <img id="logo" src={Logo} alt="Seuguia Logo"/>
-                        </Link>
-                        
-                        <p>Recupere sua senha</p>
-                    </div>
+                    <Header>Recupere sua senha</Header>
                     <form onSubmit={handleSubmit}>
-                        <FormGroup
-                            type="password"
-                            text="Insira nova senha"
-                            id="newPassword"
-                            name="newPassword"
-                            value=""
-                            placeholder="Nova Senha"
-                            required
-                        />
-                        <FormGroup
-                            type="password"
-                            text="Confirme sua senha"
-                            id="confirmPassword"
-                            name="conformPassword"
-                            value=""
-                            placeholder="Confirme sua senha"
-                            required
-                        />
+                        {FormGropProps.map(
+                            (item, idx) => <FormGroup key={idx} {...item} onChange={onChange} value={values[item.name]}/>
+                            )}
                         <LargeWrap>
                             <FlexWrap className="form-btn">
                                 <div>
@@ -50,8 +43,8 @@ function Login(props){
                     </form>
                     <LargeWrap>
                         <FlexWrap className="box-link">
-                            <Link to="../sign-up">Esqueci minha senha</Link>
-                            <Link to="../sign-up">Ainda não é cadastrado?</Link>
+                            <Link to="/login">Lembrou sua minha senha?</Link>
+                            <Link to="/sign-up">Ainda não é cadastrado?</Link>
                         </FlexWrap>
                     </LargeWrap>
                 </MediumWrap>
