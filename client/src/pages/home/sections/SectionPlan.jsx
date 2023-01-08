@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FlexMaxWitdth, FlexWrap } from "../../../components/layouts/Containers";
+import { FlexMaxWidth, FlexWrap } from "../../../components/layouts/Containers";
 import ButtonLink from "../../../components/layouts/Buttons/ButtonLink";
 
 import "./styles/SectionPlan.css";
@@ -10,7 +10,7 @@ function SectionPlan(){
 
     return(
         <section>
-                <FlexMaxWitdth id="plan">
+                <FlexMaxWidth id="plan">
                     <div>
                         <h2>Planos</h2>
                     </div>
@@ -57,7 +57,7 @@ function SectionPlan(){
 			<Card/><Card/><Card/><Card/><Card/><Card/><Card/><Card/><Card/>
 		</Cards>
                     
-                </FlexMaxWitdth>
+                </FlexMaxWidth>
             </section>
     )
 }

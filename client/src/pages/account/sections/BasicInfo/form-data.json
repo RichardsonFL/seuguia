@@ -1,0 +1,52 @@
+{
+   "field_001": [
+        {
+"text":"Nome",
+"type":"text",
+"id":"fullname",
+"name":"fullname",
+"placeholder":"Nome Completo"
+}
+    ],
+"field_002": [
+{
+"text":"E-mail",
+"type":"email",
+"id":"bi_email",
+"name":"bi_email",
+"placeholder":"exemple@email.com"
+},
+        {
+"text":"Celular",
+"type":"text",
+"id":"phone",
+"name":"phone",
+"placeholder":"(xx)-9.xxxx-xxxx"
+}
+    ],
+"field_003": [
+{
+"text":"Data Nascimento",
+"type":"date",
+"id":"born",
+"name":"born_date",
+"placeholder":"dd/mm/aaaa"
+}
+    ],
+"field_004":[
+{
+"text": "Cidade",
+"type": "text",
+"id": "city",
+"name": "city",
+"placeholder":"Sua cidade"
+},
+{
+"text": "País",
+"type": "text",
+"id": "country",
+"name": "country",
+"placeholder":"País onde mora"
+}
+]
+}

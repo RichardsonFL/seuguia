@@ -1,0 +1,43 @@
+.cards-container {
+    display: flex;
+    flex-wrap: nowrap;
+flex-direction: row;
+    gap: 16px;
+    overflow-x: scroll;
+  }
+
+  .card {
+    width: var(--w-card);
+    height: var(--h-card);
+    position: relative;
+    border-radius: 10px;
+    background: linear-gradient(
+              to right,
+              var(--card-s-color) 50% 50%,
+              var(--card-p-color) 50%
+            );
+    flex: 0 0 var(--w-card);
+  }
+
+  .fg-top,
+  .fg-bottom {
+    width: 100%;
+    padding: 10px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .fg-top {
+    height: 35%;
+    background-color: var(--card-p-color);
+    border-radius: 8px 8px 8px 32px;
+  }
+
+  .fg-bottom {
+    height: 65%;
+    background-color: var(--card-s-color);
+    border-radius: 8px 32px 8px 8px;
+  }

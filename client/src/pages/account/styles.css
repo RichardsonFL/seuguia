@@ -1,0 +1,220 @@
+
+/*  ANNOTATIONS
+  CLASSES:
+  -- row -> container-flex;
+  -- col-12 -> container-large || wrap-large;
+      width: 100% of contaiiner
+  -- col-md-9 -> 3 * quarter
+      wrap-3q
+  -- col-md-6 -> container-medium
+    Abreviation: container-md || wrap-md
+    width: 50% of container
+  -- col-3: quater container
+    Abreviation: container-small
+    width: 25% of container
+
+  -- OBS: in mobile all container width will be settup to
+          100% of width.
+
+*/
+:root {
+  --header-height: 72px;
+  --bg-default: #92c2f9;
+  --primary-font-color: #0e0f0f;
+  /* #2c2324;*/
+}
+
+.container-navbar {
+  /* Inicio Navbar */
+  box-shadow: -1px -1px 6px #808080;
+}
+
+/****  General Settigs  ****
+body {
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--primary-font-color);
+  text-align: left;
+  min-height: 100vh;
+      background-color: #e4e5e6; 
+}*/
+
+a {
+  color: var(--primary-font-color);
+  text-decoration: none;
+}
+
+main {
+  min-height: calc(100vh - var(--header-height));
+  flex: 1 1;
+  position: relative;
+}
+
+/* Im Mobile-first: Nav is row */
+nav, .nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  padding-left: 15px;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.side {
+  margin-top: 5px;
+  border-right: 1px solid #e4e7ea;
+}
+
+.nav-item {
+  flex: 1 1;
+  text-align: center;
+    /* clear: both; */
+}
+
+.nav-item {
+  /* padding: 3px 1rem; */
+  min-width: 180px;
+}
+
+.nav-profile .nav-link {
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
+.tab-pane {
+  padding: 1rem;
+  max-width: 992px;
+}
+
+
+/**** CSS Form and Input settings ****/
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group input,
+.btn,
+.form-control {
+  background-clip: padding-box;
+  background-color: #fff;
+  border: 1px solid #e4e7ea;
+  border-radius: 0.25rem;
+  color: #5c6873;
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 400;
+  height: calc(1.5em + 0.75rem + 2px);
+  line-height: 1.5;
+  padding: 0.375rem 0.75rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  width: 100%;
+}
+
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.btn {
+  color: var(--primary-font-color);
+  /*   font-weight: 600; */
+}
+
+.form-btn {
+  margin-top: 48px;
+  justify-content: center;
+}
+
+.form-btn > .wrap-small {
+  width: 75%;
+  margin-bottom: 1rem;
+}
+
+.btn-submit {
+  font-family: "Graphik", serif;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1.5;
+  color: #347cb4;
+  background-color: transparent;
+  border: 1px solid #347cb4;
+  transition: 0.3s;
+}
+
+.btn-submit:hover {
+  background-color: #347cb4;
+  color: #fff;
+  cursor: pointer;
+}
+/**** CSS Form and Input END ****/
+
+
+/****  CSS show/hide element with :target pseudo-class ****/
+/*#basicInfo,
+#legalInfo,
+#notifyAndPrivacy,
+#security {
+  display: none;
+}*/
+
+:is(#basicInfo,
+    #legalInfo,
+    #notifyAndPrivacy,
+    #security
+  ):target {
+  display: block;
+}
+/**** END CSS show/hide ****/
+
+/****  MEDIAS *****/
+@media (min-width: 768px) {
+  .nav {
+    flex-direction: column;
+  }
+
+  .nav-item {
+    min-width: auto;
+    text-align: right;
+  }
+
+  .nav-profile .nav-link {
+    padding: 12px;
+    border-right: 3px solid transparent;
+  }
+
+  .tab-pane {
+    /* padding-right: 1.5rem; */
+    margin-right: calc(2 * 8.3336%);
+  }
+
+  .wrap-large {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .wrap-md {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .wrap-small {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+
+  .wrap-3q {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+
+  .tab-content .form-btn {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: end;
+  }
+}
